@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    
+    <link rel="stylesheet" href="styletienda.css">
+    <title>Tienda</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+    <header>
+        <div class="container">
+            <h1 class="text-center">Ecommerce Demo</h1>
+            <hr>
+        </div>
+    </header>
+    <!-- START SECTION STORE -->
+    <section class="store">
+        <div class="container">
+            <div class="items">
+                <div class="row">
+
+                    <div class="col-12 col-md-6">
+                        <div class="item shadow mb-4">
+                            
+                            <h3 class="item-title papasfritas" id="papasfritas">Papas Fritas</h3>
+                            <img class="item-image" src="img/papas.png">
+
+                            <div class="item-details">
+                                <h4 class="item-price">1.99$</h4>
+                                <input class="item_cantidad " type="number" name="" value="1" id="preciod">
+
+                                <button  class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="item shadow mb-4">
+                            <h3 class="item-title">Hamburguesa</h3>
+
+                            <img class="item-image" src="img/hamburguesa.png">
+
+                            <div class="item-details">
+                                <h4 class="item-price">2.99$</h4>
+                                <input class="item_cantidad " type="number" name="" value="1" id="preciod">
+
+                                <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="item shadow mb-4">
+                            <h3 class="item-title">Pizza</h3>
+
+                            <img class="item-image" src="img/pizza.png">
+
+                            <div class="item-details">
+                                <h4 class="item-price">1.99$</h4>
+                                <input class="item_cantidad " type="number" name="" value="1" id="preciod">
+
+                                <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="item shadow mb-4">
+                            <h3 class="item-title">Alitas BBQ</h3>
+
+                            <img class="item-image" src="img/alitas.png">
+
+                            <div class="item-details">
+                                <h4 class="item-price">5.99$</h4>
+                                <input class="item_cantidad " type="number" name="" value="1" id="preciod">
+
+                                <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- END SECTION STORE -->
+    <!-- START SECTION SHOPPING CART -->
+    <section class="shopping-cart">
+        <div class="container">
+            <h1 class="text-center">CARRITO</h1>
+            <hr>
+            <div class="row2">
+                <div class="col-6">
+                    <div class="shopping-cart-header">
+                        <h6>Producto</h6>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="shopping-cart-header">
+                        <h6 class="text-truncate">Precio</h6>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="shopping-cart-header">
+                        <h6>Cantidad</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- ? START SHOPPING CART ITEMS -->
+            <div class="shopping-cart-items shoppingCartItemsContainer">
+            </div>
+            <!-- ? END SHOPPING CART ITEMS -->
+
+
+            <!-- formulario de entrega -->
+
+            <div class="form" id="contacto">
+
+                <form id="gform" name="gform" target="hidden_iframe" onsubmit="submitted=true;" >
+                    <label for="entry.1"></label>
+                    <p>Datos para la entrega 🛵</p>
+                    <input  type="text"  name="entry.1" id="entry.1" placeholder="Nombres y Apellidos" required>
+                    <label for="entry.2"></label>
+                    <p>Correo electrónico 📧</p>
+                        <input  type="email"  name="entry.2" id="entry.2" placeholder="tunombre@correo.com" required>
+                        
+
+
+                        <p>Número de WhatsApp ✅</p>
+                        <label for="entry.3"></label>
+                        <input type="number"  name="entry.3" id="entry.3" placeholder="Número de WhatsApp" required>
+         
+
+
+                        <label for="entry.4" ></label>
+                        <p>Costo Delivery selecciona el sector 📍</p>
+
+                        <select class="selectb" id="entry.4"  name="entry.4" placeholder="Rol" title="Por favor escribe cual es tu rol" required>
+                            <option value="Norte">Norte</option>
+                            <option value="Centro">Centro</option>
+                        <option value="Sur">Sur</option>
+                        <option value="Valles">Valles</option>
+ 
+                        
+                
+                        </select>
+
+                        
+                        <p>Dirección de la entrega con referencia 📍</p>
+                        <textarea name="entry.5" id="entry.5" cols="30" rows="10" placeholder="Av.10 de Agosto N345 y Valladolid frente a la escuela El Florón..." required></textarea>
+
+  
+
+                        <input id="boton" type="submit" class="sumitb" name="" onclick="goToPage();" target="_blank" value="Enviar pedido">
+                        
+                </form>
+                <p class="demo" id="demo"></p>
+
+                <!-- <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){}"></iframe> -->
+        
+        
+        </div>
+
+            <!-- START TOTAL -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="shopping-cart-total d-flex align-items-center">
+                        <p class="mb-0">Total</p>
+                        <p class="ml-4 mb-0 shoppingCartTotal">0$</p>
+                        <div class="toast ml-auto bg-info msjoculto" role="alert" aria-live="assertive" aria-atomic="true"
+                            data-delay="2000">
+                            <div class="toast-header">
+                                <span>✅</span>
+                                <strong class="mr-auto ml-1 text-secondary">Elemento en el carrito</strong>
+                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="toast-body text-white">
+                                Se aumentó correctamente la cantidad
+                            </div>
+                        </div>
+                        <button class="btn btn-success ml-auto comprarButton" type="button" data-toggle="modal"
+                            data-target="#comprarModal">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- END TOTAL -->
+
+            <!-- START MODAL COMPRA -->
+            <div class="modal fade" id="comprarModal" tabindex="-1" aria-labelledby="comprarModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="comprarModalLabel">Gracias por su compra</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Pronto recibirá su pedido</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END MODAL COMPRA -->
+dfcdfdfdfdfdfdfdfdf
+
+        </div>
+
+    </section>
+    <!-- END SECTION SHOPPING CART -->
+
+<!-- boton flotante -->
+
+
+<div id="#cardnegocioid" class='cardnegocio tripimg'>
+    <span class="icon- mw"></span>
+    <span  class="unowhat">1</span> 
+    </div>
+
+    <!-- START FOOTER -->
+    <footer class="bg-dark p-3 mt-5">
+        <p class="text-center m-0 text-muted">Ecommerce Demo</p>
+    </footer>
+    <!-- END FOOTER -->
+
+
+
+
+    <!-- SCRIPTS -->
+   
+   
+
+    <script src="tienda.js"></script>
+
+</body>
+
+</html>

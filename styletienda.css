@@ -34,7 +34,7 @@ html{
 
 .row3{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     align-items: center;
 }
 
@@ -44,7 +44,7 @@ html{
 }
 
 
-.shopping-cart-item.d-flex.align-items-center.h-100.border-bottom.pb-2.pt-3 {
+.shopping-cart-item {
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
@@ -66,6 +66,9 @@ html{
     top: 50%;
     right: 20px;
     z-index: 997;
+    color: white;
+    text-align: center;
+    font-size: 2em;
 }
 
 /* menu flotante  movil color menu2 */
@@ -364,4 +367,211 @@ span.icon-whatsapp.lw {
     bottom: -8px;
 }
 
+input#ordernumber {
+    text-align: center;
+}
 
+.ordenrandom {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: 20px;
+}
+
+.shopping-cart-quantity.d-flex.justify-content-between.align-items-center.h-100.border-bottom.pb-2.pt-3 {
+    text-align: -webkit-center;
+}
+
+button.btn.btn-success.ml-auto.comprarButton {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* animacion formas de pago */
+
+
+.mk,.mk3,.mk4{
+    display: none;
+}
+.show {
+    display: grid;
+  
+ }
+
+ .btnpagos{
+    padding: 5px 15px;
+    background: #f7fafc;
+    border-radius: 2px;
+    color: #888;
+    border-style: dashed;
+    border-color: rgba(203,213,224,8);
+ }
+
+
+
+.info {
+    text-align: center;
+    padding: 20px;
+    color: #001f3f;
+    border-bottom: 1px solid #ccc;
+}
+.info p {
+    margin-top: 20px;
+}
+
+
+
+
+.formasdepagos input[type="radio"] {
+    display: none;
+}
+.formasdepagos ¿input[type="radio"]:checked + label:before {
+    display: none;
+}
+ 
+
+
+
+ label.eti1 , label.eti2  , label.eti3 , label.eti4 {
+    color: #555;
+    padding: 0px 0px 0px 39px;
+    cursor: pointer;
+
+   
+
+}
+
+.formasdepagos{
+   display: grid;
+}
+
+label.eti1:before , label.eti2:before  , label.eti3:before , label.eti4:before {
+    content: "";
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    background: none;
+    border: 2px solid #25d366;
+    border-radius: 50%;
+   position: absolute;
+left: 13px;
+
+
+}
+
+
+
+
+.formasdepagos input[type="radio"]:checked + label.eti1,
+
+.formasdepagos input[type="radio"]:checked + label.eti3,
+.formasdepagos input[type="radio"]:checked + label.eti4
+
+
+{
+   padding: 5px 15px;
+   margin: 20px;
+
+   border-radius: 2px;
+   color:#666;
+  
+}
+
+
+.formasdepagos input[type="radio"]:checked + label:before{
+   background: #25d366;
+} 
+
+.ctacte{
+font-size: 12px;
+}
+
+ 
+/* payphone */
+
+img.payqr {
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.payphonecaja {
+    display: grid;
+ 
+    justify-items: center;
+    grid-gap: 20px;
+}
+/* input styles */
+
+.item_cantidadt input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+  
+  .item_cantidadt input[type=number]::-webkit-inner-spin-button,
+  .item_cantidadt input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+  
+  .item_cantidadt {
+    border: 2px solid #ddd;
+    display: inline-flex;
+  }
+  
+  .item_cantidadt,
+  .item_cantidadt * {
+    box-sizing: border-box;
+  }
+  
+  .item_cantidadt button {
+    outline:none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+  }
+  
+  .item_cantidadt button:before,
+  .item_cantidadt button:after {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    width: 1rem;
+    height: 2px;
+    background-color: #212121;
+    transform: translate(-50%, -50%);
+  }
+  .item_cantidadt button.plus:after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  
+  .item_cantidadt input[type=number] {
+    font-family: sans-serif;
+    max-width: 5rem;
+    padding: .5rem;
+    border: solid #ddd;
+    border-width: 0 2px;
+    font-size: 2rem;
+    height: 3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+/* gurdar los datos de productos en un  div fantasma */
+.fantasma{opacity: 0;
+    width: 1px;
+    height: 1px;
+
+}
+
+span.xcerrar {
+    display: grid;
+    grid-template-columns: auto auto;
+}
